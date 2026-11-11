@@ -5,194 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guarapuava – Paraná</title>
 <style>
-  :root {
-    --bg: #f6f4ee; --card: #ffffff; --text: #25302a; --muted: #5d6b62;
-    --accent: #2e6b4a; --accent-soft: #e3efe8; --line: #dcd8cc;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #151b17; --card: #1e2621; --text: #e8ece9; --muted: #a2b0a7;
-      --accent: #6fc196; --accent-soft: #24352b; --line: #33403a;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: Georgia, "Times New Roman", serif; line-height: 1.7;
-  }
-  header {
-    background: var(--accent); color: #fff; text-align: center;
-    padding: 56px 20px 48px;
-  }
-  header h1 { margin: 0 0 8px; font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: .5px; }
-  header p { margin: 0; font-size: 1.1rem; opacity: .92; font-style: italic; }
-  nav {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px;
-    padding: 14px 20px; background: var(--card); border-bottom: 1px solid var(--line);
-    font-family: system-ui, sans-serif; font-size: .92rem;
-  }
-  nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
-  nav a:hover { text-decoration: underline; }
-  main { max-width: 820px; margin: 0 auto; padding: 32px 20px 56px; }
-  section { margin-bottom: 36px; }
-  h2 {
-    color: var(--accent); font-size: 1.6rem; margin: 0 0 10px;
-    border-bottom: 2px solid var(--accent-soft); padding-bottom: 6px;
-  }
-  p { margin: 0 0 14px; text-align: justify; }
-  .dados {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px;
-    margin: 0 0 36px; font-family: system-ui, sans-serif;
-  }
-  .dado {
-    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-    padding: 14px; text-align: center;
-  }
-  .dado strong { display: block; font-size: 1.3rem; color: var(--accent); }
-  .dado span { font-size: .85rem; color: var(--muted); }
-  footer {
-    text-align: center; padding: 22px; color: var(--muted);
-    font-family: system-ui, sans-serif; font-size: .85rem; border-top: 1px solid var(--line);
-  }
+  :root{--bg:#f6f4ee;--card:#fff;--text:#25302a;--muted:#5d6b62;--accent:#2e6b4a;--soft:#e3efe8;--line:#dcd8cc}
+  @media (prefers-color-scheme:dark){:root{--bg:#151b17;--card:#1e2621;--text:#e8ece9;--muted:#a2b0a7;--accent:#6fc196;--soft:#24352b;--line:#33403a}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,serif;line-height:1.7}
+  header{background:var(--accent);color:#fff;text-align:center;padding:44px 20px 36px}
+  header h1{margin:0 0 6px;font-size:clamp(2rem,6vw,3.2rem)}
+  header p{margin:0;font-style:italic;opacity:.92}
+  .hero{max-width:900px;margin:-1px auto 0;padding:0 20px}
+  .hero img{width:100%;height:auto;display:block;border-radius:0 0 14px 14px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .hero figcaption{font:.85rem system-ui,sans-serif;color:var(--muted);text-align:center;margin-top:8px}
+  main{max-width:820px;margin:0 auto;padding:32px 20px 48px}
+  h2{color:var(--accent);border-bottom:2px solid var(--soft);padding-bottom:6px;margin:34px 0 12px}
+  p{margin:0 0 14px;text-align:justify}
+  .dados{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;font-family:system-ui,sans-serif;margin-top:18px}
+  .dado{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+  .dado strong{display:block;font-size:1.25rem;color:var(--accent)}
+  .dado span{font-size:.82rem;color:var(--muted)}
+  a{color:var(--accent);font-weight:600}
+  footer{text-align:center;padding:24px 20px;color:var(--muted);font:.95rem system-ui,sans-serif;border-top:1px solid var(--line)}
+  footer p{margin:0 0 6px;text-align:center}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Guarapuava</h1>
-  <p>Paraná · Brasil</p>
-</header>
-
-<nav>
-  <a href="#intro">Introdução</a>
-  <a href="#historia">História</a>
-  <a href="#clima">Clima e natureza</a>
-  <a href="#economia">Economia</a>
-  <a href="#cultura">Cultura e turismo</a>
-  <a href="#educacao">Educação</a>
-  <a href="#conclusao">Conclusão</a>
-</nav>
-
-<main>
-
-  <div class="dados">
-    <div class="dado"><strong>1819</strong><span>Fundação</span></div>
-    <div class="dado"><strong>~182 mil</strong><span>Habitantes (Censo 2022)</span></div>
-    <div class="dado"><strong>~1.100 m</strong><span>Altitude aproximada</span></div>
-    <div class="dado"><strong>~3.100 km²</strong><span>Área do município</span></div>
-  </div>
-
-  <section id="intro">
-    <h2>Introdução</h2>
-    <p>
-      Guarapuava é um município localizado na região Centro-Sul do estado do Paraná, no Sul do Brasil.
-      Situada no chamado Terceiro Planalto Paranaense, a cidade ocupa uma posição de destaque como polo
-      regional, atendendo a dezenas de municípios vizinhos em serviços de saúde, comércio, educação e
-      cultura. Por sua altitude elevada e pelos campos naturais que a cercam, é uma das cidades mais
-      frias do estado, e essa característica faz parte da identidade de seus moradores.
-    </p>
-    <p>
-      O nome Guarapuava tem origem indígena, e é comumente associado a expressões do tupi-guarani que
-      remetem ao “lobo bravo”, em referência ao lobo-guará, animal típico da região.
-    </p>
-  </section>
-
-  <section id="historia">
-    <h2>História</h2>
-    <p>
-      Antes da chegada dos colonizadores, os campos de Guarapuava eram habitados por povos indígenas,
-      entre eles os Kaingang, que conheciam e utilizavam o território havia séculos. No início do
-      século XIX, a Coroa portuguesa organizou expedições para explorar e ocupar os chamados
-      “Campos de Guarapuava”, como parte da estratégia de ampliar o domínio sobre o interior da
-      então província de São Paulo.
-    </p>
-    <p>
-      A fundação oficial da povoação ocorreu em 1819, sob a liderança do padre Francisco das Chagas
-      Lima, e o núcleo recebeu o nome de Freguesia de Nossa Senhora do Belém. Com o passar das
-      décadas, o povoado cresceu em torno da pecuária e do tropeirismo, atividade que ligava o Sul
-      do país ao restante do Brasil. A elevação à condição de município aconteceu em 1853, mesmo
-      ano em que o Paraná se emancipou de São Paulo.
-    </p>
-    <p>
-      No século XX, a cidade recebeu novos fluxos migratórios. Um dos mais marcantes foi o dos
-      imigrantes de origem germânica (os suábios do Danúbio), que a partir de 1951 fundaram a
-      colônia agrícola de Entre Rios, hoje distrito do município e referência em produção agrícola
-      e cooperativismo.
-    </p>
-  </section>
-
-  <section id="clima">
-    <h2>Clima e natureza</h2>
-    <p>
-      O clima de Guarapuava é subtropical úmido, com verões amenos e invernos rigorosos. Geadas são
-      frequentes entre os meses de maio e agosto e, em ocasiões mais raras, a cidade chega a registrar
-      neve. Por isso, é conhecida entre os paranaenses como uma das capitais do frio do estado.
-    </p>
-    <p>
-      A paisagem combina campos naturais, capões de mata e a floresta com araucárias, árvore símbolo
-      do Paraná, cujo fruto, o pinhão, é parte importante da culinária e da cultura local. Rios,
-      cachoeiras e áreas verdes urbanas completam o cenário natural e oferecem opções de lazer
-      aos moradores e visitantes.
-    </p>
-  </section>
-
-  <section id="economia">
-    <h2>Economia</h2>
-    <p>
-      A economia do município é diversificada. O agronegócio ocupa papel central, com destaque para
-      o cultivo de soja, milho, trigo, cevada e feijão, além da pecuária e da atividade florestal.
-      O cooperativismo, fortemente associado à região de Entre Rios, contribui para a agroindústria
-      e para a geração de empregos.
-    </p>
-    <p>
-      Paralelamente, o comércio e a prestação de serviços têm grande importância, já que Guarapuava
-      funciona como centro de referência para toda a região. Indústrias de beneficiamento de
-      madeira, alimentos e bebidas, além de empresas de tecnologia e de logística, também fazem
-      parte do cenário econômico.
-    </p>
-  </section>
-
-  <section id="cultura">
-    <h2>Cultura e turismo</h2>
-    <p>
-      A cultura guarapuavana reúne influências indígenas, tropeiras e de diferentes imigrantes,
-      resultando em tradições, festas e uma gastronomia próprias, na qual o pinhão, o churrasco
-      e o chimarrão têm presença marcante. A cidade conta com teatros, espaços culturais, museus
-      e eventos que movimentam a vida artística local ao longo do ano.
-    </p>
-    <p>
-      Entre os pontos de interesse estão a Catedral Nossa Senhora do Belém, praças e parques
-      urbanos, como o Parque das Araucárias e o Parque do Lago, além de atrativos naturais no
-      entorno e a visita à região de Entre Rios, que une história, paisagem rural e cultura
-      de imigração.
-    </p>
-  </section>
-
-  <section id="educacao">
-    <h2>Educação</h2>
-    <p>
-      Guarapuava é considerada um importante polo universitário do interior do Paraná. A presença
-      da Universidade Estadual do Centro-Oeste (UNICENTRO), de instituições privadas e de escolas
-      técnicas atrai estudantes de toda a região e impulsiona a pesquisa, a extensão e a
-      qualificação profissional.
-    </p>
-  </section>
-
-  <section id="conclusao">
-    <h2>Conclusão</h2>
-    <p>
-      Com história que remonta ao início do século XIX, clima marcante, paisagens de campos e
-      araucárias e uma economia forte e diversificada, Guarapuava é uma cidade que une tradição e
-      desenvolvimento. Seu papel como polo regional de serviços, educação e agronegócio a coloca
-      entre os municípios mais importantes do interior paranaense.
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  Projeto – Parte I: Descrição da cidade de Guarapuava (PR). Dados aproximados; confira as fontes oficiais, como o IBGE.
-</footer>
-
-</body>
-</html>
